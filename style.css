@@ -47,14 +47,14 @@ h1 {
 
 input {
 	width: 30%;
-	padding: 10px 20px;
+	padding: 12px 20px;
 	border-radius: 10px 0 0 10px;
 	border: none;
 	font-size: 18px;
 }
 
 button {
-	height: 42px;
+	height: 46px;
 	width: 42px;
 	text-align: center;
 	margin: 0;
@@ -87,6 +87,11 @@ button:hover {
 	border-left: solid 1px var(--dark-gray);
 }
 
+.data-wrapper section span {
+	font-size: 20px;
+	font-weight: 500;
+}
+
 .data-wrapper section:first-of-type {
 	border-left: none;
 }
@@ -98,10 +103,48 @@ h2 {
 	letter-spacing: 2px;
 	margin-top: 0;
 	margin-bottom: 20px;
+	color: var(--dark-gray);
 }
 
 #map {
 	width: 100%;
 	height: calc(100vh - 240px);
 	z-index: 1;
+}
+
+@media screen and (max-width: 950px) {
+	.data-wrapper {
+		flex-direction: column;
+		text-align: center;
+		padding: 10px 0 20px;
+		width: calc(80vw + 42px);
+		max-width: 542px;
+	}
+
+	.data-wrapper section {
+		margin: 0px 0;
+	}
+
+	h2 {
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+
+	main {
+		height: 250px;
+	}
+
+	.map {
+		height: calc(100vh - 250px);
+	}
+
+	.input-wrapper {
+		margin: 0 auto;
+	}
+
+	input {
+		width: calc(80vw - 42px);
+		max-width: 458px;
+		font-size: 14px;
+	}
 }
